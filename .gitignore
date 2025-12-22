@@ -1,23 +1,24 @@
-# Archivos de compilación y simulación generales
-*.o
-*.cf
-*.vcd
-work/
-transcript
-vsim.wlf
-
-# Xilinx Vivado
+# Archivos temporales que no vamos a querer
 *.jou
 *.log
+*.str
 *.pb
 *.wdb
-xsim/
+*.tmp
+*.os
+
+#Carpetas de compilación y simulación, no las ponenmos porque ocupan mucho espacio
+*.runs/
+*.sim/
+*.cache/
+*.hw/
+*.ip_user_files/
 .Xil/
 
-# Intel Quartus
-db/
-incremental_db/
-output_files/
-simulation/
-*.qws
-*.sopcinfo
+# bitstream
+*.bit
+*.bin
+
+# Otros
+usage_statistics_webtalk.xml
+usage_statistics_webtalk.html

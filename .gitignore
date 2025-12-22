@@ -1,0 +1,23 @@
+# Archivos de compilación y simulación generales
+*.o
+*.cf
+*.vcd
+work/
+transcript
+vsim.wlf
+
+# Xilinx Vivado
+*.jou
+*.log
+*.pb
+*.wdb
+xsim/
+.Xil/
+
+# Intel Quartus
+db/
+incremental_db/
+output_files/
+simulation/
+*.qws
+*.sopcinfo

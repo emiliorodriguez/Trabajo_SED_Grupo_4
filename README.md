@@ -22,6 +22,6 @@ En este repositorio vamos a encontrar el código y la documentación necesaria p
 
 ## ⚙️ Especificaciones Técnicas Reflejos al límite
 
-* **Lenguaje**: C++
+* **Lenguaje**: C
 * **Entorno de Desarrollo (IDE)**: STM32 CubeIDE
 * **MICRO utilizada**: [STM32F407G]

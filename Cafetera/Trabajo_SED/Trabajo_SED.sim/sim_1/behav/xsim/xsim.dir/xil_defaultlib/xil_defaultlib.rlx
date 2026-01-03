@@ -1,0 +1,20 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+C:/Trabajo_SED/Trabajo_SED.srcs/sim_1/new/Cafetera_tb.vhd,1765889092,vhdl,,,,cafetera_tb,,,,,,,,
+C:/Trabajo_SED/Trabajo_SED.srcs/sim_1/new/Clk_Divisor_tb.vhd,1764957637,vhdl,,,,clk_divisor_tb,,,,,,,,
+C:/Trabajo_SED/Trabajo_SED.srcs/sim_1/new/Debouncer_tb.vhd,1767367083,vhdl,,,,debouncer_tb,,,,,,,,
+C:/Trabajo_SED/Trabajo_SED.srcs/sim_1/new/Decoder_tb.vhd,1764957776,vhdl,,,,decoder_tb,,,,,,,,
+C:/Trabajo_SED/Trabajo_SED.srcs/sim_1/new/DetectFlanco_tb.vhd,1764957806,vhdl,,,,detectflanco_tb,,,,,,,,
+C:/Trabajo_SED/Trabajo_SED.srcs/sim_1/new/Sincronizador_tb.vhd,1764957911,vhdl,,,,sincronizador_tb,,,,,,,,
+C:/Trabajo_SED/Trabajo_SED.srcs/sim_1/new/Temporizador_tb.vhd,1764957956,vhdl,,,,temporizador_tb,,,,,,,,
+C:/Trabajo_SED/Trabajo_SED.srcs/sim_1/new/Zumbador_tb.vhd,1764958005,vhdl,,,,zumbador_tb,,,,,,,,
+C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Cafetera.vhd,1766754560,vhdl,,,,cafetera,,,,,,,,
+C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Clk_Divisor.vhd,1765529318,vhdl,,,,clk_divisor,,,,,,,,
+C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Debouncer.vhd,1764957196,vhdl,,,,debouncer,,,,,,,,
+C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Decoder.vhd,1766754514,vhdl,,,,decoder,,,,,,,,
+C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/DetectFlanco.vhd,1765529536,vhdl,,,,detectflanco,,,,,,,,
+C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Sincronizador.vhd,1764018146,vhdl,,,,sincronizador,,,,,,,,
+C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Temporizador.vhd,1765529729,vhdl,,,,temporizador,,,,,,,,
+C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Zumbador.vhd,1765529980,vhdl,,,,zumbador,,,,,,,,

@@ -1,0 +1,373 @@
+
+*** Running vivado
+    with args -log Top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Thu Dec 18 09:45:44 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source Top.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 486.766 ; gain = 199.855
+Command: read_checkpoint -auto_incremental -incremental C:/Trabajo_SED/Trabajo_SED.srcs/utils_1/imports/synth_1/Top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Trabajo_SED/Trabajo_SED.srcs/utils_1/imports/synth_1/Top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top Top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Device 21-9227] Part: xc7a100tcsg324-1 does not have CEAM library.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12780
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1363.176 ; gain = 450.055
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Top' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Top.vhd:51]
+INFO: [Synth 8-3491] module 'Clk_Divisor' declared at 'C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Clk_Divisor.vhd:38' bound to instance 'U_CLK_DIV' of component 'Clk_Divisor' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Top.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'Clk_Divisor' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Clk_Divisor.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'Clk_Divisor' (0#1) [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Clk_Divisor.vhd:46]
+INFO: [Synth 8-3491] module 'Sincronizador' declared at 'C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Sincronizador.vhd:35' bound to instance 'U_SYNC_ENC' of component 'Sincronizador' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Top.vhd:173]
+INFO: [Synth 8-638] synthesizing module 'Sincronizador' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Sincronizador.vhd:47]
+WARNING: [Synth 8-614] signal 'RESET' is read in the process but is not in the sensitivity list [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Sincronizador.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'Sincronizador' (0#1) [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Sincronizador.vhd:47]
+INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Debouncer.vhd:35' bound to instance 'U_DEB_ENC' of component 'Debouncer' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Top.vhd:180]
+INFO: [Synth 8-638] synthesizing module 'Debouncer' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Debouncer.vhd:49]
+	Parameter HOLD_TIME bound to: 20 - type: integer 
+	Parameter COUNT_BITS bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Debouncer' (0#1) [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Debouncer.vhd:49]
+INFO: [Synth 8-3491] module 'DetectFlanco' declared at 'C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/DetectFlanco.vhd:34' bound to instance 'U_EDGE_ENC' of component 'DetectFlanco' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Top.vhd:188]
+INFO: [Synth 8-638] synthesizing module 'DetectFlanco' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/DetectFlanco.vhd:43]
+WARNING: [Synth 8-614] signal 'RESET' is read in the process but is not in the sensitivity list [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/DetectFlanco.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'DetectFlanco' (0#1) [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/DetectFlanco.vhd:43]
+INFO: [Synth 8-3491] module 'Sincronizador' declared at 'C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Sincronizador.vhd:35' bound to instance 'U_SYNC_CORTO' of component 'Sincronizador' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Top.vhd:195]
+INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Debouncer.vhd:35' bound to instance 'U_DEB_CORTO' of component 'Debouncer' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Top.vhd:202]
+INFO: [Synth 8-3491] module 'DetectFlanco' declared at 'C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/DetectFlanco.vhd:34' bound to instance 'U_EDGE_CORTO' of component 'DetectFlanco' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Top.vhd:210]
+INFO: [Synth 8-3491] module 'Sincronizador' declared at 'C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Sincronizador.vhd:35' bound to instance 'U_SYNC_LARGO' of component 'Sincronizador' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Top.vhd:217]
+INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Debouncer.vhd:35' bound to instance 'U_DEB_LARGO' of component 'Debouncer' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Top.vhd:224]
+INFO: [Synth 8-3491] module 'DetectFlanco' declared at 'C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/DetectFlanco.vhd:34' bound to instance 'U_EDGE_LARGO' of component 'DetectFlanco' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Top.vhd:232]
+INFO: [Synth 8-3491] module 'Cafetera' declared at 'C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Cafetera.vhd:35' bound to instance 'U_FSM' of component 'Cafetera' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Top.vhd:239]
+INFO: [Synth 8-638] synthesizing module 'Cafetera' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Cafetera.vhd:55]
+WARNING: [Synth 8-614] signal 'Cuenta_Actual' is read in the process but is not in the sensitivity list [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Cafetera.vhd:93]
+INFO: [Synth 8-256] done synthesizing module 'Cafetera' (0#1) [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Cafetera.vhd:55]
+	Parameter C_BITS bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'Temporizador' declared at 'C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Temporizador.vhd:35' bound to instance 'U_TIMER' of component 'Temporizador' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Top.vhd:256]
+INFO: [Synth 8-638] synthesizing module 'Temporizador' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Temporizador.vhd:51]
+	Parameter C_BITS bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Temporizador' (0#1) [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Temporizador.vhd:51]
+INFO: [Synth 8-3491] module 'Zumbador' declared at 'C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Zumbador.vhd:34' bound to instance 'U_ZUMB' of component 'Zumbador' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Top.vhd:268]
+INFO: [Synth 8-638] synthesizing module 'Zumbador' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Zumbador.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'Zumbador' (0#1) [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Zumbador.vhd:44]
+INFO: [Synth 8-3491] module 'Decoder' declared at 'C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Decoder.vhd:36' bound to instance 'U_DEC_DECENA' of component 'Decoder' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Top.vhd:280]
+INFO: [Synth 8-638] synthesizing module 'Decoder' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Decoder.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'Decoder' (0#1) [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Decoder.vhd:43]
+INFO: [Synth 8-3491] module 'Decoder' declared at 'C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Decoder.vhd:36' bound to instance 'U_DEC_UNIDAD' of component 'Decoder' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Top.vhd:285]
+INFO: [Synth 8-3491] module 'Mux' declared at 'C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Mux.vhd:39' bound to instance 'U_MUX' of component 'Mux' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Top.vhd:290]
+INFO: [Synth 8-638] synthesizing module 'Mux' [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Mux.vhd:51]
+INFO: [Synth 8-226] default block is never used [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Mux.vhd:76]
+INFO: [Synth 8-256] done synthesizing module 'Mux' (0#1) [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Mux.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'Top' (0#1) [C:/Trabajo_SED/Trabajo_SED.srcs/sources_1/new/Top.vhd:51]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1473.352 ; gain = 560.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1473.352 ; gain = 560.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1473.352 ; gain = 560.230
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1473.352 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/danie/Desktop/lab_virtual.xdc]
+Finished Parsing XDC File [C:/Users/danie/Desktop/lab_virtual.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/danie/Desktop/lab_virtual.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/danie/Desktop/lab_remoto.xdc]
+WARNING: [Vivado 12-584] No ports matched 'SW[3]'. [C:/Users/danie/Desktop/lab_remoto.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/danie/Desktop/lab_remoto.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[2]'. [C:/Users/danie/Desktop/lab_remoto.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/danie/Desktop/lab_remoto.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[1]'. [C:/Users/danie/Desktop/lab_remoto.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/danie/Desktop/lab_remoto.xdc:100]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[0]'. [C:/Users/danie/Desktop/lab_remoto.xdc:101]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/danie/Desktop/lab_remoto.xdc:101]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[4]'. [C:/Users/danie/Desktop/lab_remoto.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/danie/Desktop/lab_remoto.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[5]'. [C:/Users/danie/Desktop/lab_remoto.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/danie/Desktop/lab_remoto.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[6]'. [C:/Users/danie/Desktop/lab_remoto.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/danie/Desktop/lab_remoto.xdc:104]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[7]'. [C:/Users/danie/Desktop/lab_remoto.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/danie/Desktop/lab_remoto.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[12]'. [C:/Users/danie/Desktop/lab_remoto.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/danie/Desktop/lab_remoto.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[13]'. [C:/Users/danie/Desktop/lab_remoto.xdc:110]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/danie/Desktop/lab_remoto.xdc:110]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[14]'. [C:/Users/danie/Desktop/lab_remoto.xdc:111]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/danie/Desktop/lab_remoto.xdc:111]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[15]'. [C:/Users/danie/Desktop/lab_remoto.xdc:112]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/danie/Desktop/lab_remoto.xdc:112]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[11]'. [C:/Users/danie/Desktop/lab_remoto.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/danie/Desktop/lab_remoto.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[10]'. [C:/Users/danie/Desktop/lab_remoto.xdc:114]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/danie/Desktop/lab_remoto.xdc:114]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[9]'. [C:/Users/danie/Desktop/lab_remoto.xdc:115]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/danie/Desktop/lab_remoto.xdc:115]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[8]'. [C:/Users/danie/Desktop/lab_remoto.xdc:116]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/danie/Desktop/lab_remoto.xdc:116]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTND'. [C:/Users/danie/Desktop/lab_remoto.xdc:120]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/danie/Desktop/lab_remoto.xdc:120]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTNU'. [C:/Users/danie/Desktop/lab_remoto.xdc:121]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/danie/Desktop/lab_remoto.xdc:121]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTNL'. [C:/Users/danie/Desktop/lab_remoto.xdc:122]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/danie/Desktop/lab_remoto.xdc:122]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTNR'. [C:/Users/danie/Desktop/lab_remoto.xdc:123]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/danie/Desktop/lab_remoto.xdc:123]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTNC'. [C:/Users/danie/Desktop/lab_remoto.xdc:124]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/danie/Desktop/lab_remoto.xdc:124]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/danie/Desktop/lab_remoto.xdc]
+Parsing XDC File [C:/Users/danie/Desktop/FR_SED/Trabajo/Nexys-A7-100T-Master.xdc]
+Finished Parsing XDC File [C:/Users/danie/Desktop/FR_SED/Trabajo/Nexys-A7-100T-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/danie/Desktop/FR_SED/Trabajo/Nexys-A7-100T-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1571.926 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1571.926 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1571.926 ; gain = 658.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1571.926 ; gain = 658.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1571.926 ; gain = 658.805
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'Cafetera'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 apagado |                              000 |                              000
+                  inicio |                              001 |                              001
+                   corto |                              010 |                              010
+                   largo |                              011 |                              011
+         transicion_cafe |                              100 |                              100
+                  alarma |                              101 |                              110
+       transicion_alarma |                              110 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'Cafetera'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1571.926 ; gain = 658.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   20 Bit       Adders := 1     
+	   2 Input   17 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 3     
++---Registers : 
+	               20 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 1     
+	   3 Input   13 Bit        Muxes := 1     
+	   7 Input   13 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 6     
+	   7 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 7     
+	   7 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 1571.926 ; gain = 658.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'sys_clk_pin'
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:28 . Memory (MB): peak = 1571.926 ; gain = 658.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:29 . Memory (MB): peak = 1571.926 ; gain = 658.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:29 . Memory (MB): peak = 1571.926 ; gain = 658.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:34 . Memory (MB): peak = 1571.926 ; gain = 658.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:34 . Memory (MB): peak = 1571.926 ; gain = 658.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:34 . Memory (MB): peak = 1571.926 ; gain = 658.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:34 . Memory (MB): peak = 1571.926 ; gain = 658.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:34 . Memory (MB): peak = 1571.926 ; gain = 658.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:34 . Memory (MB): peak = 1571.926 ; gain = 658.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    31|
+|3     |LUT1   |     7|
+|4     |LUT2   |    92|
+|5     |LUT3   |    29|
+|6     |LUT4   |    36|
+|7     |LUT5   |    28|
+|8     |LUT6   |    58|
+|9     |FDCE   |   111|
+|10    |IBUF   |     5|
+|11    |OBUF   |    13|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:34 . Memory (MB): peak = 1571.926 ; gain = 658.805
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:32 . Memory (MB): peak = 1571.926 ; gain = 560.230
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:35 . Memory (MB): peak = 1571.926 ; gain = 658.805
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1571.926 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 31 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1571.926 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 1f78f553
+INFO: [Common 17-83] Releasing license: Synthesis
+62 Infos, 26 Warnings, 21 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:56 . Memory (MB): peak = 1571.926 ; gain = 1075.098
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1571.926 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Trabajo_SED/Trabajo_SED.runs/synth_1/Top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 18 09:46:52 2025...
